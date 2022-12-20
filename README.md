@@ -1,4 +1,4 @@
-## Non-linear-Conductivity-Estimator
+## Non-linear Conductivity Estimator
 
 Source code for non-linear conductivity estimator with ANN.
 

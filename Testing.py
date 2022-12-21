@@ -32,4 +32,3 @@ invivo_dataset_patch_angle_norm = invivo_dataset_patch_angle_norm*invivo_mask_pa
 invivo_dataset_norm = torch.cat((invivo_dataset_patch_magnitude, invivo_dataset_patch_angle_norm),1)
 
 result = model(invivo_dataset_norm)
-result = np.reshape(result, (original data size))

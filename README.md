@@ -1,6 +1,6 @@
 ## Non-linear Conductivity Estimator
 
-Source code for non-linear conductivity estimator with ANN.
+Source code for the non-linear conductivity estimator with ANN.
 
 ## Submitted Paper
 

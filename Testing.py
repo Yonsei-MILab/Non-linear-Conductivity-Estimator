@@ -69,17 +69,11 @@ def combine_final(x,y):
     z = np.concatenate(((np.abs(xx)/nor_factor)*y, ((np.angle(xx)) - np.min((np.angle(xx))))*y),0)
     return z    
 
-
 class Custom_dataset(Dataset):
-    #Dataset = int(str(Dataset), 16)
-    #@jit(nopython=True)         
     def __init__(self,training_syn_dataset_patch):
         self.training_syn_dataset_patch = (training_syn_dataset_patch)
         self.training_mask_patch = (training_mask_patch)
 
-    
-      
-#        return output   # => [3416448, 1, 11, 11]
     def __len__(self):
         
    
@@ -90,7 +84,6 @@ class Custom_dataset(Dataset):
         x = combine_final(self.training_syn_dataset_patch[idx], training_mask_patch[idx])
         y = training_label_patch[idx] 
         return x,y
-
 
 dataset = Custom_dataset(training_syn_dataset_patch)
 dataloader = DataLoader(dataset,batch_size= 100000,shuffle=True)
@@ -125,8 +118,10 @@ print(model)
 # loss function
 criterion = nn.MSELoss()
 
+
 # optimizer
 optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
+
 
 # Network Training
 

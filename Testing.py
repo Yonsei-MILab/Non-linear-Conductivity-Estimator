@@ -25,7 +25,7 @@ invivo_dataset_patch_angle = torch.angle(invivo_dataset_patch)
 #Phase Normalization
 [az,ch,ax,ay]=invivo_dataset_patch_angle.shape
 for sslice in range(az):
-    invivo_dataset_patch_angle_norm[sslice] = np.squeeze(invivo_dataset_patch_angle[sslice,:,:,:] - torch.min(invivo_dataset_patch_angle[sslice,:,:,:]))
+    invivo_dataset_patch_angle_norm[sslice] = np.squeeze(invivo_dataset_patch_angle[sslice,:,:,:]/2 - torch.min(invivo_dataset_patch_angle[sslice,:,:,:]/2))
 invivo_dataset_patch_angle_norm = torch.tensor(invivo_dataset_patch_angle_norm)
 
 #Compose the input data

@@ -33,4 +33,5 @@ invivo_dataset_patch_magnitude = invivo_dataset_patch_magnitude*invivo_mask_patc
 invivo_dataset_patch_angle_norm = invivo_dataset_patch_angle_norm*invivo_mask_patch
 invivo_dataset_norm = torch.cat((invivo_dataset_patch_magnitude, invivo_dataset_patch_angle_norm),1)
 
+#Test the input data on the network
 result = model(invivo_dataset_norm)

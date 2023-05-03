@@ -20,7 +20,7 @@ invivo_dataset_patch = np.array(invivo_dataset.unfold(2, kernel_h, step).unfold(
 invivo_mask_patch = np.array(invivo_mask.unfold(2, kernel_h, step).unfold(3, kernel_w, step).permute(2, 3, 0, 1, 4, 5).reshape(-1, n_channels, kernel_h, kernel_w))
 
 invivo_dataset_patch_magnitude = torch.abs(invivo_dataset_patch)
-invivo_dataset_patch_angle = torch.angle(invivo_dataset_patch)/2
+invivo_dataset_patch_angle = torch.angle(invivo_dataset_patch)
 
 #Phase Normalization
 [az,ch,ax,ay]=invivo_dataset_patch_angle.shape

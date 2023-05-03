@@ -13,6 +13,7 @@ invivo_mask = torch.tensor(dataset['dataset_mask'])
 invivo_mask = np.expand_dims(invivo_mask,1)
 invivo_mask = torch.tensor(invivo_mask)
 
+# Patch the dataset 11 by 11
 kernel_h, kernel_w = 11, 11
 step, n_channels = 1, 1
 invivo_dataset_patch = np.array(invivo_dataset.unfold(2, kernel_h, step).unfold(3, kernel_w, step).permute(2, 3, 0, 1, 4, 5).reshape(-1, n_channels, kernel_h, kernel_w))
@@ -21,14 +22,15 @@ invivo_mask_patch = np.array(invivo_mask.unfold(2, kernel_h, step).unfold(3, ker
 invivo_dataset_patch_magnitude = torch.abs(invivo_dataset_patch)
 invivo_dataset_patch_angle = torch.angle(invivo_dataset_patch)/2
 
+#Phase Normalization
 [az,ch,ax,ay]=invivo_dataset_patch_angle.shape
 for sslice in range(az):
     invivo_dataset_patch_angle_norm[sslice] = np.squeeze(invivo_dataset_patch_angle[sslice,:,:,:] - torch.min(invivo_dataset_patch_angle[sslice,:,:,:]))
 invivo_dataset_patch_angle_norm = torch.tensor(invivo_dataset_patch_angle_norm)
 
+#Compose the input data
 invivo_dataset_patch_magnitude = invivo_dataset_patch_magnitude*invivo_mask_patch
 invivo_dataset_patch_angle_norm = invivo_dataset_patch_angle_norm*invivo_mask_patch
-
 invivo_dataset_norm = torch.cat((invivo_dataset_patch_magnitude, invivo_dataset_patch_angle_norm),1)
 
 result = model(invivo_dataset_norm)

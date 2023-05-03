@@ -72,7 +72,7 @@ def combine_final(x,y):
     nor_factor = (1.3-0.7)*np.random.rand(1)+ 0.7
     xx = add_noise_to_complex(add_bias(x,nor_factor), y)
     #xx = add_noise_to_complex(x, y)
-    z = np.concatenate(((np.abs(xx)/nor_factor)*y, ((np.angle(xx)) - np.min((np.angle(xx))))*y),0)
+    z = np.concatenate(((np.abs(xx)/nor_factor)*y, ((np.angle(xx)/2) - np.min((np.angle(xx)/2)))*y),0)
     return z    
 
 class Custom_dataset(Dataset):

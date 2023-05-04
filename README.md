@@ -16,7 +16,7 @@ The paper entitled : "Data-driven Electrical Conductivity Neuroimaging using 3T 
 ## Example File
 
 As an example training and test datasets, numerical simulations were performed in MATLAB for cylindrical phantoms: 2D-complex B1+ & B1- maps were obtained by the Bessel-boundary-matching method (Bob van den Bergen, et al., 2009), which enables electromagnetic field simulations for concentric models.
-Both single & Double-layered cylindrical models were composed with various radii and various conductivity values, resulting in a total of 58 example cylinder models for the training dataset.
+Both single & double-layered cylindrical models were composed with various radii and various conductivity values, resulting in a total of 58 example cylinder models for the training dataset.
 The test dataset is a double-layered cylinder model, which has never been included for the radii in the training dataset (for both inner & outer cylinders' radii).
 
 * Example_Nonlinear_Conductivity_Estimator_Cylinder : Code example for training & testing the network with cylinder models.

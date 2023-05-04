@@ -28,4 +28,4 @@ The test dataset is a double-layered cylinder model, which has never been includ
 * Cylinder_Test_Dataset.mat : Test dataset with a cylinder model.
 
 # Reference
-van den Bergen, B., Stolk, C.C., van den Berg, J.B., Lagendijk, J.J.W., and Van den Berg, C.A.T. (2009), Ultra fast electromagnetic field computations for RF multi-transmit techniques in high field MRI
+van den Bergen, B., Stolk, C.C., van den Berg, J.B., Lagendijk, J.J.W., and Van den Berg, C.A.T. (2009), Ultra fast electromagnetic field computations for RF multi-transmit techniques in high field MRI. Physics in Medicine & Biology, 54(5), 1253-1264.

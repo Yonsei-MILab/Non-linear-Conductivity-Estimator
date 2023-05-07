@@ -29,4 +29,5 @@ The test dataset is a double-layered cylinder model, which has never been includ
 
 # Reference
 Jung, K.J., Mandija, S., Cui, C., Kim, J.H., Al-masni, M.A., Meerbothe, T.G., Park, M., van den Berg, C.A.T., and Kim, D.H. (2023), Data-driven Electrical Conductivity Neuroimaging using 3T MRI. Human Brain Mapping, Under Review.
+
 van den Bergen, B., Stolk, C.C., van den Berg, J.B., Lagendijk, J.J.W., and Van den Berg, C.A.T. (2009), Ultra fast electromagnetic field computations for RF multi-transmit techniques in high field MRI. Physics in Medicine & Biology, 54(5), 1253-1264.
